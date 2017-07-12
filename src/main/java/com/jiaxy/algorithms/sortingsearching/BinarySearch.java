@@ -18,7 +18,7 @@ public class BinarySearch {
 
 
     private static int recurse(int[] arr, int f, int l, int r) {
-        int m = l + (r - 1) / 2;
+        int m = l + (r - l) / 2;
         if (arr[m] == f) {
             return m;
         } else if (arr[m] < f) {
@@ -33,7 +33,7 @@ public class BinarySearch {
         int l = 0;
         int r = arr.length - 1;
         while (l <= r) {
-            int m = l + (r - 1) / 2;
+            int m = l + (r - l) / 2;
             if (arr[m] == f) {
                 return m;
             } else if (arr[m] < f) {
